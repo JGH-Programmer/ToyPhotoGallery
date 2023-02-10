@@ -1,10 +1,12 @@
 package git.myapplication.toyphotogallery.AccountPage
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Toast
 import git.myapplication.toyphotogallery.DBHelper
+import git.myapplication.toyphotogallery.HomeActivity
 import git.myapplication.toyphotogallery.databinding.ActivityLoginBinding
 
 class Login : AppCompatActivity() {
@@ -27,7 +29,8 @@ class Login : AppCompatActivity() {
                 val checkuser = DBHelper(this).checkuserpass(usertx, passwordtx)
                 if (checkuser == true) {
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                    //intent Activity
+                    val intent = Intent(this,HomeActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(this, "Wrong Username & Password", Toast.LENGTH_SHORT).show()
                 }
