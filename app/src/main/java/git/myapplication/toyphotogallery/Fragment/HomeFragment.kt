@@ -19,9 +19,6 @@ class HomeFragment : Fragment() {
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        binding.FragmentHomeButton.setOnClickListener {
-            Toast.makeText(getActivity(), "Home Fragment Button", Toast.LENGTH_SHORT).show()
-        }
 
         val view = binding.root
         return view
