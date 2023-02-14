@@ -21,31 +21,6 @@
 
     </fragment>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </androidx.viewpager.widget.ViewPager>
-
-    <me.relex.circleindicator.CircleIndicator
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        app:ci_drawable="@drawable/black_radius"
-        app:ci_height="7dp"
-        app:ci_width="7dp"
-        app:ci_gravity="center_vertical||right"
-        android:layout_marginRight="5dp"
-        android:paddingTop="30dp"
-
-        app:layout_constraintStart_toStartOf="@id/viewPager"
-        app:layout_constraintEnd_toEndOf="@id/viewPager"
-        app:layout_constraintBottom_toBottomOf="@id/viewPager">
-
-    </me.relex.circleindicator.CircleIndicator>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

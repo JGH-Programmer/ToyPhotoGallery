@@ -6,6 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.HomeFragment">
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/HomeFragmentViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.viewpager2.widget.ViewPager2>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:ci_drawable="@drawable/black_radius"
+        app:ci_height="7dp"
+        app:ci_width="7dp"
+        app:ci_gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:paddingTop="30dp"
+
+        app:layout_constraintStart_toStartOf="@id/HomeFragmentViewPager"
+        app:layout_constraintEnd_toEndOf="@id/HomeFragmentViewPager"
+        app:layout_constraintBottom_toBottomOf="@id/HomeFragmentViewPager">
+
+    </me.relex.circleindicator.CircleIndicator>
+
     <TextView
         android:id="@+id/FragmentHomeTextView"
         android:layout_width="wrap_content"
