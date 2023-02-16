@@ -14,7 +14,6 @@ import androidx.viewpager2.widget.ViewPager2
 import git.myapplication.toyphotogallery.Home.HomeViewPagerAdapter
 import git.myapplication.toyphotogallery.R
 import git.myapplication.toyphotogallery.databinding.FragmentHomeBinding
-import me.relex.circleindicator.CircleIndicator
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
@@ -37,7 +36,6 @@ class HomeFragment : Fragment() {
 
         init()
         setUpTransformer()
-        binding.HomeFragmentIndicator.setViewPager(binding.HomeFragmentViewPager)
 
 
 
@@ -91,13 +89,14 @@ class HomeFragment : Fragment() {
         adapter = HomeViewPagerAdapter(imageList, viewPager2)
 
 
-
         viewPager2.adapter = adapter
         viewPager2.offscreenPageLimit = 3
         viewPager2.clipToPadding = false
         viewPager2.clipChildren = false
         viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
+
+        binding.HomeFragmentIndicator.setViewPager(binding.HomeFragmentViewPager)
 
 
     }
@@ -108,8 +107,4 @@ class HomeFragment : Fragment() {
     }
 
 
-}
-
-private fun CircleIndicator.setViewPager(homeFragmentViewPager: ViewPager2) {
-    setViewPager(homeFragmentViewPager)
 }
