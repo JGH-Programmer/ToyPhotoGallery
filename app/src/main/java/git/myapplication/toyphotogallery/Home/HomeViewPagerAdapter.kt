@@ -28,6 +28,7 @@ class HomeViewPagerAdapter(
     private val runnable = Runnable {
         imageList.addAll(imageList)
         notifyDataSetChanged()
+        
     }
 
     override fun getItemCount(): Int {

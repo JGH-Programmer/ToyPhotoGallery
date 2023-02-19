@@ -9,64 +9,60 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/HomeFragmentViewPager"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="20dp">
 
     </androidx.viewpager2.widget.ViewPager2>
-
-
-    <me.relex.circleindicator.CircleIndicator3
-        android:id="@+id/HomeFragmentIndicator"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginRight="5dp"
-        android:paddingTop="30dp"
-        app:ci_drawable="@drawable/black_radius"
-        app:ci_gravity="center_vertical"
-        app:ci_height="7dp"
-        app:ci_width="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/FragmentHomeTextView"
-        app:layout_constraintEnd_toEndOf="@id/HomeFragmentViewPager"
-        app:layout_constraintStart_toStartOf="@id/HomeFragmentViewPager"
-        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentViewPager">
-
-    </me.relex.circleindicator.CircleIndicator3>
-
-    <TextView
-        android:id="@+id/FragmentHomeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageView
         android:id="@+id/HomeFragmentDog"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
         android:src="@drawable/dog"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FragmentHomeTextView">
+        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentViewPager"
+        android:layout_marginStart="30dp">
 
     </ImageView>
 
     <ImageView
+        android:id="@+id/HomeFragmentCat"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/picture"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentDog">
+        android:src="@drawable/cat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/HomeFragmentPicture"
+        app:layout_constraintStart_toEndOf="@+id/HomeFragmentDog"
+        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentViewPager">
 
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/HomeFragmentPicture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/picture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/HomeFragmentPlanet"
+        app:layout_constraintStart_toEndOf="@+id/HomeFragmentCat"
+        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentViewPager">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/HomeFragmentPlanet"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/planet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/HomeFragmentPicture"
+        app:layout_constraintTop_toBottomOf="@+id/HomeFragmentViewPager">
     </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

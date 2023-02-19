@@ -3,6 +3,7 @@ package git.myapplication.toyphotogallery.Fragment
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,6 +40,7 @@ class HomeFragment : Fragment() {
 
 
 
+
         viewPager2.registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
@@ -53,6 +55,7 @@ class HomeFragment : Fragment() {
 
     private val runnable = Runnable{
         viewPager2.currentItem = viewPager2.currentItem + 1
+
     }
 
     private fun setUpTransformer() {
@@ -85,6 +88,7 @@ class HomeFragment : Fragment() {
 
         imageList.add(R.drawable.puppy)
         imageList.add(R.drawable.puppy2)
+        imageList.add(R.drawable.puppyandcat)
 
         adapter = HomeViewPagerAdapter(imageList, viewPager2)
 
@@ -96,7 +100,9 @@ class HomeFragment : Fragment() {
         viewPager2.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
 
-        binding.HomeFragmentIndicator.setViewPager(binding.HomeFragmentViewPager)
+
+
+
 
 
     }
